@@ -1,0 +1,17 @@
+<%= form_for(@tasks) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
+
+
+ <!-- create_table "tasks", force: :cascade do |t|
+   t.string "title"
+   t.text "details"
+   t.boolean "completed", default: false
+   t.datetime "created_at", precision: 6, null: false
+   t.datetime "updated_at", precision: 6, null: false -->

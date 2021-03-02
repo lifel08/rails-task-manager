@@ -1,0 +1,10 @@
+<%= form_for(@tasks) do |f| %>
+  <%= f.label :title.downcase %>
+  <%= f.text_field :title.downcase %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
+

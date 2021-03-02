@@ -1,2 +1,21 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>My tasks</h1>
+
+<i class="far fa-square"></i>
+<ul>
+  <% @tasks.each do |task| %>
+    <li> <i class= '<%= task.completed ? "fas fa-check-square" :  "far fa-square" %>' > </i>
+  -
+  <%= link_to task.title, task_path(task) %> </li>
+      <%= link_to "Delete #{task.title}",
+            tasks_delete_path(task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new Task", tasks_new_path %>
+
+<!-- prefix + http = the word path -->
+<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="tasks/:id">
+  Delete the Task
+</a>

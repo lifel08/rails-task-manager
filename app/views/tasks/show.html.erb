@@ -1,0 +1,6 @@
+<h1><%= @tasks.title.downcase %></h1>
+<p><%= @tasks.details %></p>
+<p> Completed? - <%= @tasks.completed %></p>
+
+<h2>Want to edit this task?</h2>
+<%= link_to "Edit", tasks_edit_path %>
